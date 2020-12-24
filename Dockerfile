@@ -8,11 +8,14 @@ RUN apt-get -y upgrade
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
 
-EXPOSE 8051
+EXPOSE 80
 
 # Copy the application.
 COPY . /opt/app
 WORKDIR /opt/app
+
+RUN mkdir ~/.streamlit
+RUN cp config.toml ~/.streamlit/config.toml
 
 # Install the app librairies.
 RUN pip install -r requirements.txt
