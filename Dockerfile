@@ -8,6 +8,8 @@ RUN apt-get -y upgrade
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
 
+EXPOSE 8051
+
 # Copy the application.
 COPY . /opt/app
 WORKDIR /opt/app
@@ -16,5 +18,5 @@ WORKDIR /opt/app
 RUN pip install -r requirements.txt
 
 # Start the app.
-ENTRYPOINT [ "python" ]
+ENTRYPOINT [ "streamlit", "run" ]
 CMD [ "main.py" ]
