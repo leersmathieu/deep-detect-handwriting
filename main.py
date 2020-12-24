@@ -7,12 +7,14 @@ from src import Image, Model
 model = Model()
 
 st.set_option("deprecation.showfileUploaderEncoding", False)
+st.set_page_config(page_title="Deep detect handwriting")
 
 # Content
-st.title("Deep detect my handwriting")
+st.title("Deep detect handwriting")
 st.markdown("""
-Deep detect my handwriting is a app based on a CNN model,
-to recognize the digit that you draw on the canvas.
+Deep detect handwriting is a Python app based on a CNN model,
+to recognize the digit that you draw on the canvas. See the [notebook
+of the model's creation](https://colab.research.google.com/drive/1APQlJMs4TzP25N7oi4fhD0uGdjPS7LZZ?usp=sharing) for more details.
 """)
 
 # Sidebar
@@ -31,7 +33,8 @@ Python dev, studying Machine Learning at BeCode.org.
 st.sidebar.header("See on github")
 st.sidebar.markdown("""
 See the code and fork this project on Github:
-- [Deep Detect Handwriting repository](https://github.com/Joffreybvn/deep-detect-handwriting)
+
+[Deep Detect Handwriting repository](https://github.com/Joffreybvn/deep-detect-handwriting)
 """)
 
 col1, col2 = st.beta_columns(2)
@@ -40,6 +43,7 @@ with col1:
 
     # Display a h3 title
     st.subheader("Drawing area")
+    st.markdown("Draw a digit. Don't make it easy !")
 
     # Create a canvas component
     canvas_result = st_canvas(
@@ -60,6 +64,7 @@ with col2:
 
     # Display a h2 title
     st.subheader("What the computer see")
+    st.markdown("Your drawing is resized and gray-scaled")
 
     # Display the transformed image
     if image.array is not None:
@@ -77,6 +82,7 @@ if (image.array is not None) and (not image.is_empty()):
     # Display the digit predicted by the model
     with col3:
         st.subheader("Recognized digit")
+        st.markdown("The digit recognized by the model")
         st.markdown(
             f'<p style="font-size: 190px;'
             f'font-weight: bold;'
@@ -97,4 +103,5 @@ if (image.array is not None) and (not image.is_empty()):
         )
 
         st.subheader("Probability distribution")
+        st.markdown("Was your digit hard to recognize ?")
         st.bar_chart(chart_data.T)
