@@ -31,7 +31,7 @@ Python dev, studying Machine Learning at BeCode.org.
 st.sidebar.header("See on github")
 st.sidebar.markdown("""
 See the code and fork this project on Github:
-- Github: [joffreybvn](https://github.com/joffreybvn)
+- [Deep Detect Handwriting repository](https://github.com/Joffreybvn/deep-detect-handwriting)
 """)
 
 col1, col2 = st.beta_columns(2)
