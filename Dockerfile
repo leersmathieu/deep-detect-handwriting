@@ -8,7 +8,7 @@ RUN apt-get -y upgrade
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
 
-EXPOSE 8051
+EXPOSE 2095
 
 # Copy the application.
 COPY . /opt/app
