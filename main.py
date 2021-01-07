@@ -14,27 +14,27 @@ st.title("Deep detect handwriting")
 st.markdown("""
 Deep detect handwriting is a Python app based on a CNN model,
 to recognize the digit that you draw on the canvas. See the [notebook
-of the model's creation](https://colab.research.google.com/drive/1APQlJMs4TzP25N7oi4fhD0uGdjPS7LZZ?usp=sharing) for more details.
+of the model's creation](https://colab.research.google.com/drive/1vxbdpoZK9SiifBkuuqmvqyZ77bg59sOL?usp=sharing) for more details.
 """)
 
 # Sidebar
 st.sidebar.header("About the author")
 st.sidebar.markdown("""
-**Joffrey Bienvenu**
+**Leers Mathieu**
 
 Python dev, studying Machine Learning at BeCode.org.
 
- - Website: [joffreybvn.be](https://joffreybvn.be/)
- - Twitter: [@joffreybvn](https://twitter.com/Joffreybvn)
- - LinkedIn: [in/joffreybvn](https://www.linkedin.com/in/joffreybvn/)
- - Github: [joffreybvn](https://github.com/joffreybvn)
+ - Website: [leersmathieu.com](https://leersmathieu.com/)
+ - TwitterBot: [@tamikofficiel](https://twitter.com/tamikofficiel)
+ - LinkedIn: [in/leers-mathieu](https://www.linkedin.com/in/leers-mathieu/)
+ - Github: [leersmathieu](https://github.com/leersmathieu)
 """)
 
 st.sidebar.header("See on github")
 st.sidebar.markdown("""
 See the code and fork this project on Github:
 
-[Deep Detect Handwriting repository](https://github.com/Joffreybvn/deep-detect-handwriting)
+[Deep Detect Handwriting repository](https://github.com/leersmathieu/deep-detect-handwriting)
 """)
 
 col1, col2 = st.beta_columns(2)
