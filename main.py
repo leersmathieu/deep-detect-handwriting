@@ -47,12 +47,12 @@ with col1:
 
     # Create a canvas component
     canvas_result = st_canvas(
-        stroke_width=15,
+        stroke_width=20,
         stroke_color="#fff",
         background_color="#000",
         update_streamlit=True,
-        height=290,
-        width=290,
+        height=280,
+        width=280,
         drawing_mode="freedraw",
         key="canvas",
     )
@@ -70,7 +70,7 @@ if st.button('Get prediction'):
 
         # Display the transformed image
         if image.array is not None:
-            st.image(image.get_streamlit_displayable(), width=290)
+            st.image(image.get_streamlit_displayable(), width=280)
 
     # Check if the user has written something
     if (image.array is not None) and (not image.is_empty()):
@@ -91,8 +91,8 @@ if st.button('Get prediction'):
                 f'flex-direction: column;'
                 f'justify-content: space-around;'
                 f'border: 1px solid #000;'
-                f'width: 290px;'
-                f'height: 290px;">{prediction}</p>',
+                f'width: 280px;'
+                f'height: 280px;">{prediction}</p>',
                 unsafe_allow_html=True
             )
 
